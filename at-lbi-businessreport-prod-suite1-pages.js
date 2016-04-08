@@ -1,5 +1,5 @@
-var baseURL = 'http://inregister.com';
-var site = 'inregister';
+var baseURL = 'http://businessreport.com';
+var site = 'businessreport';
 var links = [];
 
 casper.test.begin('Suite #1: Checking pages', function suiteOne(){
@@ -20,7 +20,7 @@ casper.test.begin('Suite #1: Checking pages', function suiteOne(){
 		casper.then(function(){
 			console.log('cleaning up links...and locating valid ones to check');
 			var validElements = [];
-			var re = new RegExp('https://www.inregister.com\/.*');
+			var re = new RegExp('https://www.businessreport.com\/.*');
 
 			function replaceElement(element, index, array){
 				if (re.test(element)) {

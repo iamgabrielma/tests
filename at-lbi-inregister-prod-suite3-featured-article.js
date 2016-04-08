@@ -8,7 +8,7 @@ casper.test.begin('Suite #3: Featured Article', function suiteOne(){
 
 	casper.start(baseURL, function(){
 
-		console.log('------------------- Checking Featured Article -------------------');
+		console.log('---- Checking Featured Article ----');
 		if (this.visible('.article-tile-image')) {
 			this.test.assert(true, '1/1 Featured Article Tile Image is rendering correctly');
 		} else {

@@ -1,5 +1,5 @@
-var baseURL = 'http://inregister.com';
-var site = 'inregister';
+var baseURL = 'http://businessreport.com';
+var site = 'businessreport';
 
 casper.test.begin('Suite #2: Header', function suiteOne(){
 
@@ -8,23 +8,23 @@ casper.test.begin('Suite #2: Header', function suiteOne(){
 			console.log('---- Checking Header Elements ----');
 
 			if (this.visible('.header-logo')) {
-				this.test.assert(true, 'Test 1/3 Logo is rendering correctly');
+				this.test.assert(true, '1/3 Logo is rendering correctly');
 			} else {
 				this.test.assert(false, 'Logo is not rendering correctly');	
 			}
 			if (this.visible('.header-search')) {
-				this.test.assert(true, 'Test 2/3 Search bar is rendering correctly');
+				this.test.assert(true, '2/3 Search bar is rendering correctly');
 			} else {
 				this.test.assert(false, 'Search bar is not rendering correctly');	
 			}
-			if (this.visible('.social-link')) {
-				this.test.assert(true, 'Test 3/3 Social media icons are rendering correctly');
+			if (this.visible('.header-social')) {
+				this.test.assert(true, '3/3 Social media icons are rendering correctly');
 			} else {
 				this.test.assert(false, 'Social media icons are not rendering correctly');	
 			}
 
 			var i = 1;
-			var navTopLabels = ['Main', 'Features', 'Style','Homes','Weddings', 'Cuisine', 'Events', 'Advertising', 'About Us'];
+			var navTopLabels = ['Home', 'Business', 'Politics','Real Estate','Daily Report AM', 'Daily Report PM', 'Events'];
 			console.log('Are pages visible and clickable?');
 			
 			casper.each(navTopLabels, function(self, navTopLabel){
@@ -34,13 +34,6 @@ casper.test.begin('Suite #2: Header', function suiteOne(){
 				}
 				i++;
 			});
-
-			if (this.visible('.splitter-container')) {
-				this.test.assert(true, 'Splitter container is rendering correctly');
-			} else {
-				this.test.assert(false, 'Splitter container is not rendering correctly');	
-			}
-
 		});
 
 	casper.run(function() {
