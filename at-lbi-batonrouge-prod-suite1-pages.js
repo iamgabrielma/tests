@@ -1,6 +1,6 @@
 
-var baseURL = 'http://inregister.com';
-var site = 'inregister';
+var baseURL = 'http://225batonrouge.com';
+var site = '225batonrouge';
 
 var links = [];
 var paginationLinks = [];
@@ -27,7 +27,7 @@ casper.test.begin('Suite #1: Checking scaffolding, links, images and general str
 		casper.then(function(){
 			console.log('cleaning up links...and locating valid ones to check');
 			var validElements = [];
-			var re = new RegExp('https://www.inregister.com\/.*');
+			var re = new RegExp('http://www.225batonrouge.com\/.*');
 
 			function replaceElement(element, index, array){
 				if (re.test(element)) {
